@@ -1,5 +1,14 @@
 services:
   - type: web
+    name: chat-backend
+    env: node
+    region: oregon
+    rootDir: backend
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    plan: starter   # backend cannot be free
+
+  - type: web
     name: chat-frontend
     env: static
     rootDir: frontend

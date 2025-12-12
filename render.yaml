@@ -1,16 +1,7 @@
 services:
   - type: web
-    name: chat-backend
-    env: node
-    plan: starter
-    region: oregon
-    buildCommand: "npm install"
-    startCommand: "npm start"
-    rootDir: backend
-
-  - type: web
     name: chat-frontend
     env: static
+    rootDir: frontend
     buildCommand: "npm install && npm run build"
     staticPublishPath: "dist"
-    rootDir: frontend
